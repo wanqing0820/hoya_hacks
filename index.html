@@ -1,50 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>My first three.js app</title>
-		<style>
-			body { margin: 0; }
-		</style>
-	</head>
-	<body>
-		<script src="three.js"></script>
-		<script>
-			const scene = new THREE.Scene();
-			const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
 
-			var light = new THREE.DirectionalLight( 0xffffff );
-			light.position.set( 0, 0, 1 ).normalize();
-			scene.add(light);
+	<title>ISAFE</title>
 
-			const renderer = new THREE.WebGLRenderer();
-			renderer.setSize( window.innerWidth, window.innerHeight );
-			document.body.appendChild( renderer.domElement );
+	
+	<link href="css/slides.min.css?41331" rel="stylesheet" type="text/css">
 
-			const geometry = new THREE.SphereGeometry( 1, 32, 32 );
-      const texture = new THREE.TextureLoader().load('images/earth.jpg');
-			const material = new THREE.MeshPhongMaterial({ map: texture });
-			material.bumpMap    = new THREE.TextureLoader().load('images/earthbump.jpg')
-			material.bumpScale = 0.05
-			// material.specularMap    = new THREE.TextureLoader().load('images/specular.jpg')
-			// material.specular  = new THREE.Color('grey')
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-			const cube = new THREE.Mesh( geometry, material );
-			scene.add( cube );
+	<script src="js/slides.min.js?41331" type="text/javascript"></script>
 
-			material.needsUpdate = true;
-			camera.position.z = 5;
+	<link rel="stylesheet" as="font" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,600,700|Material+Icons"/>
+ 
+</head>
+<body class="slides chain simplifiedMobile animated">
+		
 
-			const animate = function () {
-				requestAnimationFrame( animate );
+<nav class="side pole">
+  <div class="navigation">
+    <ul></ul>
+  </div>
+</nav>
 
-				cube.rotation.x += 0.01;
-				cube.rotation.y += 0.01;
 
-				renderer.render( scene, camera );
-			};
 
-			animate();
-		</script>
-	</body>
+
+
+
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+
+        <div class="fix-12-12">
+          <div class="fix-3-12">
+            <h1><strong> ISAFE </strong></h1>
+          <p class="ae-3"><span class="opacity-8">Predict <b>natural disaster </b> around the country</span></p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/earth.jpg)"></div>
+</section>
+
+
+<section class="slide fade-6 kenBurns fromLeft">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-12-12">
+            <ul class="flex fixedSpaces verticalCenter reverse">
+              <li class="col-6-12 left middle">
+                <h1 class="ae-1 fromLeft">About Us</h1>
+                <p class="ae-2 fromLeft"><span class="opacity-8">Many believe that when the stars
+                  and planets are in malevolent position in our natal charts bad events or bad things would
+                  happen. Everyone one of us loves to avoid such bad things or disasters. The disaster is
+                  the impact of both natural and man-made events that influence our life and environment
+                  that surrounds us.</span></p>
+              </li>
+              <li class="col-6-12">
+                <img class="ae-4" width="605" src="logo.svg" alt="Logo" data-action="zoom"/>
+              </li>
+            </ul>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/disaster1.jpg)"></div>
+</section>
+
+<section class="slide fade-6 kenBurns fromRight">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-12-12">
+          <div class="fix-6-12 left toLeft">
+            <h1 class="ae-1">Predict Huricane</h1>
+            <p class="ae-2"><span class="opacity-8"> One of the most dangerous forms of storm which has the capacity to destroy millions of lives, flora, fauna is known as hurricanes. Hurricanes are formed due to the warm waters near the equator. The large strokes which formed over the Atlantic ocean and pacific ocean are termed as hurricanes.</span></p>
+            <a href="Earth2/earth2.html" class="button blue gradient crop ae-3">Get Started</a>
+          </div>
+        </div>
+            
+      </div>  
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/huricane.jpg)"></div>
+</section>
+
+<section class="slide fade-6 kenBurns fromRight">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-12-12">
+          <div class="fix-6-12 left toRight">
+            <h1 class="ae-1">Predict Wildfires</h1>
+            <p class="ae-5"><span class="opacity-8">Wildfires can cause much destruction and cost millions of dollars in damage.
+              Increase in severity and frequency of wildfires may be due to increased human development in wild/rural areas and climate change.
+              Ability to predict wildfires cause can help prevent and/or manage wildfires.
+              Enable fire scientists to quickly determine the cause of wildfire
+              </span></p>
+            <a href="Earth1/earth1.html" class="button blue gradient crop ae-3">Get Started</a>
+          </div>
+        </div>
+            
+      </div>  
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/wilfire.jpg)"></div>
+</section>
+<section class="slide fade-6 kenBurns">
+  <div class="content">
+    <div class="container">
+      <div class="wrap">
+      
+        <div class="fix-10-12 toCenter">
+          <h1 class="ae-1">Teams</h1>
+        </div>
+        <div class="fix-12-12">  
+          <ul class="grid grid-74 later equal margin-top-5">
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-3 fromCenter">
+              <a href="#" class="box-74">
+                <div class="thumbnail-74">
+                  <img src="assets/img/team1.jpg" class="wide" alt="Thumbnail" width="180px" height="180px"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="">Mohammad Raahemi</h3>
+                    <p class="tiny opacity-6 cropBottom">I am Mohammad Raahemi, an M.Sc. student at university of Ottawa. Currently I am honored to serve Canadians as a Data Scientist in Canada Border Service Agency. </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-4 fromCenter">
+              <a href="#" class="box-74">
+                <div class="thumbnail-74">
+                  <img src="assets/img/team2.JPG" class="wide" alt="Thumbnail" width="180px" height="180px"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="">Sav Hersheley</h3>
+                    <p class="tiny opacity-6 cropBottom">I am a sophomore in southern Utah who loves graphic design as well as computer science </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
+              <a href="#" class="box-74">
+                <div class="thumbnail-74">
+                  <img src="assets/img/team3.jpg" class="wide" alt="Thumbnail" width="180px" height="180px"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="">Rhea Shastri</h3>
+                    <p class="tiny opacity-6 cropBottom">I am undergrad student who is good with frontend web development and UI/UX design.</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li class="col-3-12 col-tablet-1-2 col-phablet-1-1 ae-5 fromCenter">
+              <a href="#" class="box-74">
+                <div class="thumbnail-74">
+                  <img src="assets/img/" class="wide" alt="Thumbnail" width="180px" height="180px"/>
+                </div>
+                <div class="name-74 equalElement table wide">
+                  <div class="cell left top">
+                    <h3 class="">Wan Qing Chua</h3>
+                    <p class="tiny opacity-6 cropBottom">I am cornell university undergrad who love to work with google cloud</p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+                
+      </div>
+    </div>
+  </div>
+  <div class="background" style="background-image:url(assets/img/background/img-85.jpg)"></div>
+</section>
+
+
+
+
+
+
+<div class="progress-bar blue"></div>
+		
+</body>
 </html>
